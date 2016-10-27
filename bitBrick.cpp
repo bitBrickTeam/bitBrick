@@ -158,23 +158,19 @@ void bitBrick::set_motor_all_stop()
 {
 	for(int i = 0;i<4;i++)
 	{//19 servo
-		if (getData[10+i*2] == 19)  port[i+5] = 181;
+		if (getData[10+i] == 19)  port[i+5] = 181;
 		else                    port[i+5] = 0;
 	}
 }
 
 void bitBrick::data_in()
 {
-	//Serial.print("te");
 	if (Serial1.available() > 0)
-	{//Serial.print("vvv");
+	{
 		for (int i = 0 ; i < 17; i++)
 		{
 			getData[i] = Serial1.read();
-			//Serial.print(getData[i]);
-			//Serial.print("-");
 		}
-		//Serial.println();
 	}
 }
 
@@ -218,15 +214,15 @@ void bitBrick::data_out()
 	else                       Serial1.write(port[A]);//port 1 Data
 	Serial1.write(0);
 	//        Serial1.write(port[B]);
-	if (getData[12] == 19)        Serial1.write(181 - port[B]); //if the servo connected data will convert
+	if (getData[11] == 19)        Serial1.write(181 - port[B]); //if the servo connected data will convert
 	else                       Serial1.write(port[B]);//port 2 Data
 	Serial1.write(0);
 	//        Serial1.write(port[C]);
-	if (getData[14] == 19)        Serial1.write(181 - port[C]); //if the servo connected data will convert
+	if (getData[12] == 19)        Serial1.write(181 - port[C]); //if the servo connected data will convert
 	else                       Serial1.write(port[C]);//port 3 Data
 	Serial1.write(0);
 	//        Serial1.write(port[D]);
-	if (getData[16] == 19)        Serial1.write(181 - port[D]); //if the servo connected data will convert
+	if (getData[13] == 19)        Serial1.write(181 - port[D]); //if the servo connected data will convert
 	else                       Serial1.write(port[D]);//port 3 Data
 	Serial1.write(0);
 	Serial1.write(port[LED_R]);//red
@@ -236,8 +232,6 @@ void bitBrick::data_out()
 	Serial1.write(port[LED_B]);//blue
 	Serial1.write(254);
 	Serial1.write(254);
-	
-	//Serial.print("start");
 }
 
 void bitBrick::run()
@@ -247,28 +241,4 @@ void bitBrick::run()
 	bitBrick::data_in();
 	bitBrick::data_parsing();
 }
-/*
-ISR(TIMER1_OVF_vect)
-{
 
-}
-*/
-
-
-/*
-ISR(TIMER1_COMPA_vect)
-{
-	//bitBrick::data_out();
-	bitBrick::get_module_check(3);
-	
-}
-*/
-/*
-ISR(bitBrick)
-{
-        //bitBrick::data_out();
-        //delay(20);
-        //bitBrick::data_in();
-        //bitBrick::data_parsing();
-}
-*/
