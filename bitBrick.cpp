@@ -165,7 +165,7 @@ void bitBrick::set_motor_all_stop()
 
 void bitBrick::data_in()
 {
-	if (Serial1.available() > 0)
+	if (Serial1.available() > 17)
 	{
 		for (int i = 0 ; i < 17; i++)
 		{
