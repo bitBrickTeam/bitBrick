@@ -2,50 +2,50 @@ bitBrick	KEYWORD1
 Brick	KEYWORD2
 
 
-set_led_off				KEYWORD1
-set_led_rgb				KEYWORD1
-set_led_num				KEYWORD1
-set_led_color			KEYWORD1
-set_buzzer				KEYWORD1
-set_buzzer_num			KEYWORD1
+set_led_off	KEYWORD1
+set_led_rgb	KEYWORD1
+set_led_num	KEYWORD1
+set_led_color	KEYWORD1
+set_buzzer	KEYWORD1
+set_buzzer_num	KEYWORD1
 set_dc_motor_velocity	KEYWORD1
 set_dc_motor_dir_speed	KEYWORD1
-set_servo_motor			KEYWORD1
-set_motor_all_stop		KEYWORD1
+set_servo_motor	KEYWORD1
+set_motor_all_stop	KEYWORD1
 
-get_sensor_value		KEYWORD1
+get_sensor_value	KEYWORD1
 
-data_out_set			KEYWORD1
-data_out				KEYWORD1
-data_in					KEYWORD1
-data_parsing			KEYWORD1
+data_out_set	KEYWORD1
+data_out	KEYWORD1
+data_in	KEYWORD1
+data_parsing	KEYWORD1
 
-BUZZER  				KEYWORD1
-A        				KEYWORD1
-B        				KEYWORD1	
-C        				KEYWORD1
-D        				KEYWORD1
-LED_R    				KEYWORD1
-LED_G   				KEYWORD1
-LED_B   				KEYWORD1
+BUZZER	KEYWORD1
+A	KEYWORD1
+B	KEYWORD1
+C	KEYWORD1
+D	KEYWORD1
+LED_R	KEYWORD1
+LED_G	KEYWORD1
+LED_B	KEYWORD1
 
-CW        				KEYWORD1
-CCW       				KEYWORD1
+CW	KEYWORD1
+CCW	KEYWORD1
 
-ON        				KEYWORD1
-OFF       				KEYWORD1
+ON	KEYWORD1
+OFF	KEYWORD1
 
 
-red      				KEYWORD1
-green    				KEYWORD1
-blue     				KEYWORD1
-orange					KEYWORD1
-yellow   				KEYWORD1
-pink     				KEYWORD1
-skyblue					KEYWORD1
-navy     				KEYWORD1
-purple   				KEYWORD1
-white    				KEYWORD1
+red	KEYWORD1
+green	KEYWORD1
+blue	KEYWORD1
+orange	KEYWORD1
+yellow	KEYWORD1
+pink	KEYWORD1
+skyblue	KEYWORD1
+navy	KEYWORD1
+purple	KEYWORD1
+white	KEYWORD1
 
 
 Timer1	KEYWORD2
