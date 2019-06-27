@@ -12,9 +12,6 @@ bitBrick myBrick;
 
 #include <TimerOne.h>
 
-
-int val = 2;
-
 void setup()
 {
   Timer1.initialize(20000);//20000->20ms bitBrick need a data every 20ms
@@ -25,22 +22,20 @@ void setup()
 void loop()
 {
   ////////////////////your Code START//////////////////////////////
-  if ((myBrick.get_sensor_value(2) < 500) || (myBrick.get_sensor_value(4) < 400))
-  {
-    if (val < 250)     val++;
 
-  }
-  else
-  {
-    if (val >= 2)     val -= 2;
-    else             val = 0;
-  }
 
-  myBrick.set_led_rgb(val, val, val);
-  delay(5);
+  int sensorVal = myBrick.get_sensor_value(2);
+  sensorVal = map(sensorVal, 20, 980, 0, 30);
+
+  int zero = myBrick.get_sensor_value(3);
+  zero = map(zero, 0, 1023, 0, 80);
+  myBrick.set_servo_motor(A, zero + sensorVal);
+
 
   /////////////////////your Code END//////////////////////////////
 }
+
+
 
 void bitBrickRun(void)
 {
